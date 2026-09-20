@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XV Años de Lucía - Disco Night</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Shrikhand&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Explora&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+US+Trad:wght@100..400&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --silver-light: #f0f3f5;
+      --silver-mid: #c0c0c0;
+      --silver-dark: #708090;
+      --bg-dark: #0a0a0c;
+      --fucsia-dark: #e33a74;
+      --black: #000;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--silver-light);
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      background-image:
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(190, 190, 190, 0.08) 0%, transparent 50%);
+    }
+
+    .noto-sans {
+      font-family: "Explora", serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .card {
+      background-image: url('fondo-disco.jpeg');
+      background-repeat: repeat;
+      background-size: 550px 550px;
+      border: 1px solid var(--silver-mid);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(192, 192, 192, 0.2);
+      backdrop-filter: blur(10px);
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      transition: all 0.4s ease-in-out;
+      padding-top: 0;
+    }
+
+    .padding {
+      padding: 1em;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
+
+      50% {
+        box-shadow: 0 0 35px rgba(255, 255, 255, 0.9);
+      }
+    }
+
+    .disco-ball-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      padding: 0 1em;
+    }
+
+    .lulu-img {
+      width: 100%;
+    }
+
+    .fecha-img {
+      width: 100%;
+      background: var(--black);
+      border-radius: 12px;
+    }
+
+    h1 {
+      font-family: 'Shrikhand', cursive;
+      font-size: 4.5rem;
+      color: #ffffff;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+      margin-bottom: 5px;
+    }
+
+    .greeting {
+      font-size: 1.4rem;
+      color: #ffffff;
+      font-weight: 600;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      letter-spacing: 1px;
+      color: var(--silver-mid);
+      margin: 1em 0;
+    }
+
+    .welcome-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--silver-light);
+      margin: 1em 0;
+    }
+
+    .container-mini-lu-1 {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -4em;
+    }
+
+    .mini-lu-1-size {
+      width: 40%;
+    }
+
+    .info-item {
+      margin: 12px 0;
+    }
+
+    .info-item strong {
+      display: block;
+      color: var(--fucsia-dark);
+      font-size: 1rem;
+      letter-spacing: 1.5px;
+      margin-bottom: .5em;
+    }
+
+    .info-item span {
+      font-size: 1rem;
+      color: var(--silver-mid);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin: 1em 0;
+      color: var(--silver-light);
+    }
+
+    select,
+    input[type="tel"] {
+      width: 100%;
+      padding: 13px 15px;
+      border-radius: 8px;
+      border: 1px solid var(--silver-dark);
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      text-align: center;
+    }
+
+    select {
+      text-align: left;
+    }
+
+    select option {
+      background: #111;
+      color: #fff;
+    }
+
+    select:focus,
+    input:focus {
+      border-color: #fff;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    select:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 1em;
+      border: none;
+      border-radius: 8px;
+      color: var(--fucsia-dark);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: -2em;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
+      background: var(--silver-dark);
+      color: #e0e0e0;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid var(--silver-dark);
+      margin-top: 10px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .link-btn {
+      background: none;
+      border: none;
+      color: var(--silver-mid);
+      text-decoration: underline;
+      font-size: 0.8rem;
+      margin-top: 15px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .link-btn:hover {
+      color: #fff;
+    }
+
+    #message {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .map-container {
+      margin: 15px 0 25px;
+    }
+
+    .map-iframe-wrapper {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--silver-dark);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      margin-bottom: 12px;
+      height: 180px;
+    }
+
+    .map-btn {
+      display: block;
+      text-decoration: none;
+      background: var(--black);
+      color: var(--fucsia-dark);
+      border: 1px solid var(--silver-mid);
+      padding: 12px 15px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      margin: 1em;
+    }
+
+    .map-btn:hover {
+      background: #ffffff;
+      color: var(--black);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .countdown-container {
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .countdown-title {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--silver-mid);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .countdown-grid {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 8px;
+      margin-top: 2em;
+    }
+
+    .time-box {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--silver-dark);
+      border-radius: 8px;
+      padding: 10px 20px;
+      min-width: 60px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .time-box span {
+      font-family: 'Shrikhand', cursive;
+      font-size: 1.4rem;
+      color: #ffffff;
+      display: block;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    }
+
+    .time-box label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--silver-mid);
+      margin-top: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <img src="bola-disco.gif" alt="Disco Ball" class="disco-ball-img">
+
+    <!-- PANTALLA 1 -->
+    <div id="welcomeScreen">
+      <div class="padding">
+        <h1 class="noto-sans">Lucia's XV</h1>
+        <p class="welcome-text">
+          ¡Llegó la hora de celebrar! Hay noches que quedan grabadas para siempre y esta no sería igual sin vos.
+          Preparate para una fiesta llena de luces, música, abrazos y recuerdos inolvidables. ¡Acompañame a festejar mis
+          15! 🪩✨
+        </p>
+
+        <form id="welcomeForm">
+          <div class="form-group">
+            <label for="welcomePhoneInput" style="text-align: center;">Ingresá tu número de teléfono para descubrir tu
+              invitación</label>
+            <input type="tel" id="welcomePhoneInput" placeholder="Ej: 88888888" required>
+          </div>
+          <div class="container-mini-lu-1">
+            <img src="lucia-1.svg" alt="Lucia viendo el numero" class="mini-lu-1-size">
+          </div>
+          <button type="submit" class="btn">Acceder a mi invitación</button>
+        </form>
+        <div id="message"></div>
+      </div>
+    </div>
+
+    <!-- PANTALLA 2 -->
+    <div id="invitationScreen" style="display: none;">
+      <div class="padding">
+        <div id="guestGreeting" class="greeting">¡Hola!</div>
+        <div class="subtitle">La felicidad se multiplica cuando se celebra en familia y con grandes amigos. Por eso, mis
+          papás y yo queremos invitarte a ser parte de mis 15 años; una noche llena de ilusión, amor y recuerdos que
+          guardaremos para siempre. ¡Nos haría muy felices contar con vos para celebrar juntos!</div>
+      </div>
+      <img src="fecha.png" alt="Fecha Domingo 25 de octubre 5pm" class="fecha-img">
+
+      <!-- CONTADOR REGRESIVO -->
+      <div class="countdown-container">
+        <div class="info-item"><strong>Nos vemos en:</strong></div>
+        <div class="countdown-grid">
+          <div class="time-box">
+            <span id="cd-days">00</span>
+            <label>Días</label>
+          </div>
+          <div class="time-box">
+            <span id="cd-hours">00</span>
+            <label>Hs</label>
+          </div>
+          <div class="time-box">
+            <span id="cd-minutes">00</span>
+            <label>Min</label>
+          </div>
+          <div class="time-box">
+            <span id="cd-seconds">00</span>
+            <label>Seg</label>
+          </div>
+        </div>
+      </div>
+
+      <img src="Lulu-1.svg" alt="Lucia 1" class="lulu-img">
+      <div class="padding">
+        <div class="info-item">
+          <strong>Lugar</strong>
+          <span>Hacienda Pinaris, Tres Ríos</span>
+          <div class="map-container">
+            <div class="map-iframe-wrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4232.374726915211!2d-83.98281491867463!3d9.898282349533794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e1703d58b26d%3A0xaeedf0e5ec3a5c0c!2sHacienda%20Pinares!5e1!3m2!1ses!2scr!4v1789359401972!5m2!1ses!2scr"
+                width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <a href="https://maps.app.goo.gl/eKjDfQHWN323jJav5" target="_blank" class="map-btn">
+              📍 Abrir ubicación en Google Maps
+            </a>
+            <a href="https://ul.waze.com/ul?place=ChIJbbJYPXDhoI8RDFw67OXw7a4&ll=9.89827710%2C-83.97794400&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+              target="_blank" class="map-btn">
+              📍 Abrir ubicación en Waze
+            </a>
+          </div>
+        </div>
+      </div>
+      <img src="Lulu-2.svg" alt="Lucia 1" class="lulu-img">
+      <div class="padding">
+        <div class="info-item">
+          <strong>Dress Code</strong>
+          <span>Formal</span>
+          <br>
+          <span>Nos encantaría que nos acompañes en el color que prefieras, exceptuando la gama del rosa, fucsia o rojo. Para cuidar la etiqueta del evento, te agradecemos no utilizar jeans.</span>
+        </div>
+      </div>
+      <img src="Lulu-3.svg" alt="Lucia 1" class="lulu-img">
+      <div class="padding">
+        <div class="info-item">
+          <strong>Regalos</strong>
+          <span>Lluvia de sobres</span>
+        </div>
+      </div>
+      <button id="goToRsvpBtn" class="btn" style="margin-top: 1em;">Confirmar Asistencia ➔</button>
+    </div>
+
+    <!-- PANTALLA 3 -->
+    <div id="rsvpScreen" style="display: none; padding: 1em;">
+      <div id="rsvpGreeting" class="greeting">Confirmar Asistencia</div>
+      <div class="subtitle">Selecciona tus espacios</div>
+
+      <form id="rsvpForm">
+        <div class="form-group">
+          <label for="seatsInput">Cantidad de personas que asistirán</label>
+          <select id="seatsInput" required></select>
+          <small id="maxSeatsHelp"
+            style="color: var(--silver-mid); font-size: 0.75rem; display: block; margin-top: 6px;"></small>
+        </div>
+        <button type="submit" id="submitBtn" class="btn" style="margin-top: 1em;">Enviar Confirmación</button>
+      </form>
+
+      <div>
+        <button id="backToInvBtn" class="btn btn-secondary">← Volver a la invitación</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzdd3jeneM4jWXXZkHomssRq6TRS0VLWbgsBrMWbSQJq8MQ3IIUFYpPlqWR7aGwl9gDWA/exec';
+
+    let currentGuestName = "";
+    let maxAllowed = 1;
+
+    // Elementos de pantalla
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const invitationScreen = document.getElementById('invitationScreen');
+    const rsvpScreen = document.getElementById('rsvpScreen');
+
+    const welcomeForm = document.getElementById('welcomeForm');
+    const welcomePhoneInput = document.getElementById('welcomePhoneInput');
+    const guestGreeting = document.getElementById('guestGreeting');
+    const goToRsvpBtn = document.getElementById('goToRsvpBtn');
+
+    const rsvpForm = document.getElementById('rsvpForm');
+    const seatsInput = document.getElementById('seatsInput');
+    const maxSeatsHelp = document.getElementById('maxSeatsHelp');
+    const submitBtn = document.getElementById('submitBtn');
+    const backToInvBtn = document.getElementById('backToInvBtn');
+    const message = document.getElementById('message');
+
+    // ==========================================
+    // CONTADOR REGRESIVO
+    // ==========================================
+    // 25 de Octubre de 2026 a las 5:00 PM
+    const eventDate = new Date(2026, 9, 25, 17, 0, 0).getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      const daysEl = document.getElementById('cd-days');
+      const hoursEl = document.getElementById('cd-hours');
+      const minutesEl = document.getElementById('cd-minutes');
+      const secondsEl = document.getElementById('cd-seconds');
+
+      if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+      if (distance < 0) {
+        const container = document.querySelector('.countdown-container');
+        if (container) {
+          container.innerHTML = '<div class="greeting" style="font-size: 1rem; color: #51cf66;">¡Llegó el día de celebrar! 🪩🎉</div>';
+        }
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysEl.textContent = days < 10 ? '0' + days : days;
+      hoursEl.textContent = hours < 10 ? '0' + hours : hours;
+      minutesEl.textContent = minutes < 10 ? '0' + minutes : minutes;
+      secondsEl.textContent = seconds < 10 ? '0' + seconds : seconds;
+    }
+
+    // Ejecutar el contador de inmediato
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ==========================================
+    // EVENTOS Y NAVEGACIÓN
+    // ==========================================
+    window.addEventListener('DOMContentLoaded', () => {
+      updateCountdown();
+      const urlParams = new URLSearchParams(window.location.search);
+      const guestParam = urlParams.get('invitado');
+
+      if (guestParam) {
+        cargarDatosInvitado("nombre", guestParam);
+      }
+    });
+
+    welcomeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const phone = welcomePhoneInput.value.trim();
+      message.style.color = '#ffffff';
+      message.textContent = 'Buscando tu invitación personalizada...';
+      cargarDatosInvitado("telefono", phone);
+    });
+
+    goToRsvpBtn.addEventListener('click', () => {
+      invitationScreen.style.display = 'none';
+      rsvpScreen.style.display = 'block';
+      message.textContent = '';
+    });
+
+    backToInvBtn.addEventListener('click', () => {
+      rsvpScreen.style.display = 'none';
+      invitationScreen.style.display = 'block';
+    });
+
+    // Consultar Google Sheets
+    function cargarDatosInvitado(tipoFiltro, valor) {
+      fetch(`${SCRIPT_URL}?tipo=${tipoFiltro}&valor=${encodeURIComponent(valor)}`)
+        .then(response => response.json())
+        .then(res => {
+          if (!res.encontrado) {
+            message.style.color = '#ff6b6b';
+            message.textContent = 'No encontramos una invitación con ese dato. Verifica e intenta de nuevo.';
+            return;
+          }
+
+          welcomeScreen.style.display = 'none';
+          rsvpScreen.style.display = 'none';
+          invitationScreen.style.display = 'block';
+
+          // Forzar refresco del reloj al entrar
+          updateCountdown();
+
+          currentGuestName = res.nombre;
+          const esIndividual = res.max === 1;
+
+          guestGreeting.textContent = esIndividual
+            ? `¡Hola, ${res.nombre}! Tenés un lugar reservado en la pista 💃`
+            : `¡Hola, ${res.nombre}! Tenemos sus lugares reservados en la pista 💃`;
+          maxAllowed = res.max;
+
+          if (res.registrado) {
+            goToRsvpBtn.disabled = true;
+            goToRsvpBtn.textContent = 'Asistencia Confirmada ✓';
+
+            message.style.color = '#51cf66';
+            const textoEspacios = res.espaciosConfirmados === 1 ? '1 espacio' : `${res.espaciosConfirmados} espacios`;
+            message.innerHTML = `
+              ¡Ya confirmaste tu asistencia! Te esperamos en la pista de baile. 🪩<br>
+              <small style="color: var(--silver-mid); display: block; margin-top: 8px;">
+                (Confirmaste ${textoEspacios})
+              </small>
+            `;
+          } else {
+            goToRsvpBtn.disabled = false;
+            goToRsvpBtn.textContent = 'Confirmar Asistencia ➔';
+            message.textContent = '';
+
+            seatsInput.innerHTML = '';
+            for (let i = 1; i <= maxAllowed; i++) {
+              const option = document.createElement('option');
+              option.value = i;
+              option.textContent = i === 1 ? '1 persona' : `${i} personas`;
+              seatsInput.appendChild(option);
+            }
+
+            if (maxAllowed === 1) {
+              seatsInput.disabled = true;
+              maxSeatsHelp.textContent = 'Tienes 1 espacio disponible.';
+            } else {
+              seatsInput.disabled = false;
+              maxSeatsHelp.textContent = `Tienes hasta ${maxAllowed} espacios disponibles.`;
+            }
+          }
+        })
+        .catch(error => {
+          message.style.color = '#ff6b6b';
+          message.textContent = 'Ocurrió un error al conectar con la lista de invitados.';
+        });
+    }
+
+    rsvpForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      seatsInput.disabled = false;
+      const seats = parseInt(seatsInput.value, 10);
+
+      submitBtn.disabled = true;
+      message.style.color = '#ffffff';
+      message.textContent = 'Guardando tu confirmación...';
+
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nombre: currentGuestName, espaciosConfirmados: seats })
+      })
+        .then(() => {
+          rsvpScreen.style.display = 'none';
+          invitationScreen.style.display = 'block';
+
+          goToRsvpBtn.disabled = true;
+          goToRsvpBtn.textContent = 'Asistencia Confirmada ✓';
+
+          message.style.color = '#51cf66';
+          const textoEspacios = seats === 1 ? '1 espacio' : `${seats} espacios`;
+          message.innerHTML = `
+          ¡Ya confirmaste tu asistencia! Te esperamos en la pista de baile. 🪩<br>
+          <small style="color: var(--silver-mid); display: block; margin-top: 8px;">
+            (Confirmaste ${textoEspacios})
+          </small>
+        `;
+        })
+        .catch(error => {
+          message.style.color = '#ff6b6b';
+          message.textContent = 'Ocurrió un error al guardar. Inténtalo de nuevo.';
+          submitBtn.disabled = false;
+          if (maxAllowed === 1) seatsInput.disabled = true;
+        });
+    });
+  </script>
+</body>
+
+</html>
