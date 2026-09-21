@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -117,6 +118,7 @@
       letter-spacing: 1px;
       color: var(--silver-mid);
       margin: 1em 0;
+      background: #000;
     }
 
     .welcome-text {
@@ -124,6 +126,7 @@
       line-height: 1.5;
       color: var(--silver-light);
       margin: 1em 0;
+      background: #000;
     }
 
     .container-mini-lu-1 {
@@ -143,14 +146,16 @@
     .info-item strong {
       display: block;
       color: var(--fucsia-dark);
-      font-size: 1rem;
+      font-size: 1.2rem;
       letter-spacing: 1.5px;
-      margin-bottom: .5em;
+      margin-bottom: 1em;
     }
 
     .info-item span {
       font-size: 1rem;
       color: var(--silver-mid);
+      background: #000;
+      margin-bottom: 2em;
     }
 
     .form-group {
@@ -164,6 +169,7 @@
       letter-spacing: 1px;
       margin: 1em 0;
       color: var(--silver-light);
+      background: #000;
     }
 
     select,
@@ -262,7 +268,7 @@
     }
 
     .map-container {
-      margin: 15px 0 25px;
+      margin: 2em 0;
     }
 
     .map-iframe-wrapper {
@@ -286,7 +292,7 @@
       font-weight: 600;
       letter-spacing: 1px;
       transition: all 0.3s ease;
-      margin: 1em;
+      margin: 1.5em 0.5em;
     }
 
     .map-btn:hover {
@@ -349,7 +355,9 @@
 <body>
 
   <div class="card">
-    <img src="bola-disco.gif" alt="Disco Ball" class="disco-ball-img">
+    <img
+      src="https://res.cloudinary.com/djbjeuxkt/image/upload/v1789940629/bola-disco-ezgif.com-gif-to-webp-converter.webp"
+      alt="Disco Ball" class="disco-ball-img" fetchpriority="high">
 
     <!-- PANTALLA 1 -->
     <div id="welcomeScreen">
@@ -368,7 +376,8 @@
             <input type="tel" id="welcomePhoneInput" placeholder="Ej: 88888888" required>
           </div>
           <div class="container-mini-lu-1">
-            <img src="lucia-1.svg" alt="Lucia viendo el numero" class="mini-lu-1-size">
+            <img src="https://res.cloudinary.com/djbjeuxkt/image/upload/v1789939175/lucia-1.svg"
+              alt="Lucia viendo el numero" loading="eager" class="mini-lu-1-size">
           </div>
           <button type="submit" class="btn">Acceder a mi invitación</button>
         </form>
@@ -384,7 +393,8 @@
           papás y yo queremos invitarte a ser parte de mis 15 años; una noche llena de ilusión, amor y recuerdos que
           guardaremos para siempre. ¡Nos haría muy felices contar con vos para celebrar juntos!</div>
       </div>
-      <img src="fecha.png" alt="Fecha Domingo 25 de octubre 5pm" class="fecha-img">
+      <img src="https://res.cloudinary.com/djbjeuxkt/image/upload/v1789940884/fecha.png"
+        alt="Fecha Domingo 25 de octubre 5pm" class="fecha-img" loading="eager">
 
       <!-- CONTADOR REGRESIVO -->
       <div class="countdown-container">
@@ -409,7 +419,8 @@
         </div>
       </div>
 
-      <img src="Lulu-1.svg" alt="Lucia 1" class="lulu-img">
+      <img src="https://res.cloudinary.com/djbjeuxkt/image/upload/v1789940885/Lulu-1.svg" alt="Lucia 1"
+        class="lulu-img">
       <div class="padding">
         <div class="info-item">
           <strong>Lugar</strong>
@@ -432,28 +443,78 @@
           </div>
         </div>
       </div>
-      <img src="Lulu-2.svg" alt="Lucia 1" class="lulu-img">
+      <img
+        src="https://res.cloudinary.com/djbjeuxkt/image/upload/v1789949255/Colorful_Collage_Cut_Outs_Birthday_Party_Invitation_5.svg"
+        alt="Lucia 1" class="lulu-img">
       <div class="padding">
         <div class="info-item">
-          <strong>Dress Code</strong>
-          <span>Formal</span>
+          <strong>Código de vestimenta</strong>
+          <div>
+            <span>Formal</span>
+          </div>
           <br>
-          <span>Nos encantaría que nos acompañes en el color que prefieras, exceptuando la gama del rosa, fucsia o rojo. Para cuidar la etiqueta del evento, te agradecemos no utilizar jeans.</span>
+          <span>Nos encantaría que nos acompañes en el color que prefieras, exceptuando la gama del rosa, fucsia o rojo.
+            Para cuidar la etiqueta del evento, te agradecemos no utilizar jeans.</span>
         </div>
       </div>
-      <img src="Lulu-3.svg" alt="Lucia 1" class="lulu-img">
       <div class="padding">
         <div class="info-item">
-          <strong>Regalos</strong>
-          <span>Lluvia de sobres</span>
+          <strong>¡Tu mirada de la noche!</strong>
+          <span>Escaneá el código QR para acceder a la app compartida. Cada invitado tiene un cupo de 25 fotos para
+            subir: explorá la galería, mirá las fotos de los demás y dejá tu huella en el álbum de los 15 de
+            Lucía.</span>
+          <div
+            style="background: rgba(255, 255, 255, 0.03); border: 1px dashed var(--silver-dark); border-radius: 10px; padding: 12px; text-align: center; margin: 1em;">
+            <img style="width: 50%;"
+              src="https://res.cloudinary.com/djbjeuxkt/image/upload/v1789951289/WhatsApp_Image_2026-09-20_at_6.41.03_PM.jpg"
+              alt="Lucia 1">
+          </div>
         </div>
       </div>
-      <button id="goToRsvpBtn" class="btn" style="margin-top: 1em;">Confirmar Asistencia ➔</button>
+      <img src="https://res.cloudinary.com/djbjeuxkt/image/upload/v1789940885/Lulu-2.svg" alt="Lucia 1"
+        class="lulu-img">
+      <div class="padding">
+        <div class="info-item">
+          <strong>¡Lo más importante es celebrar juntos!</strong>
+          <span>
+            ¡Lo más importante es celebrar juntos! Si querés tenés el gesto de hacerme un obsequio, cualquier regalo o
+            detalle elegido con cariño me hará muy feliz. 🎁✨
+          </span>
+          <div
+            style="background: rgba(255, 255, 255, 0.03); border: 1px dashed var(--silver-dark); border-radius: 10px; padding: 12px; text-align: center; margin: 1em;">
+            <span
+              style="font-weight: 600; color: var(--silver-light); display: block; margin-bottom: 4px; font-size: 0.9rem;">
+              El día de la fiesta habrá un espacio especial
+              para recibir tus detalles</span>
+          </div>
+          <!-- OPCIÓN SECUNDARIA: SINPE para el viaje -->
+          <div
+            style="background: rgba(255, 255, 255, 0.03); border: 1px dashed var(--silver-dark); border-radius: 10px; padding: 12px; text-align: center; margin: 1em;">
+            <span
+              style="font-weight: 600; color: var(--silver-light); display: block; margin-bottom: 4px; font-size: 0.9rem;">
+              Si preferís regalarme dinero para mi viaje, podés llevarlo en un sobre el día del evento o realizar un
+              SINPE:</span>
+            <span>Número:</span>
+            <span:>[Insertar número]</span>
+              <br>
+              <span>Nombre:</span>
+              <span>[Insertar nombre del titular]</span>
+          </div>
+        </div>
+      </div>
+      <div class="padding">
+        <div class="info-item">
+          <strong>Confirmar Asistencia</strong>
+          <span>Por favor, confirmános tu asistencia antes del 10 de septiembre para organizar cada detalle y asegurar tu lugar en esta noche tan especial.</span>
+          <button id="goToRsvpBtn" class="btn" style="margin-top: 1em;">Confirmar Asistencia</button>
+        </div>
+      </div>
     </div>
 
     <!-- PANTALLA 3 -->
     <div id="rsvpScreen" style="display: none; padding: 1em;">
       <div id="rsvpGreeting" class="greeting">Confirmar Asistencia</div>
+      <span> Tienes disponibles: </span>
       <div class="subtitle">Selecciona tus espacios</div>
 
       <form id="rsvpForm">
@@ -461,7 +522,7 @@
           <label for="seatsInput">Cantidad de personas que asistirán</label>
           <select id="seatsInput" required></select>
           <small id="maxSeatsHelp"
-            style="color: var(--silver-mid); font-size: 0.75rem; display: block; margin-top: 6px;"></small>
+            style="color: var(--silver-mid); font-size: 1rem; display: block; margin-top: 6px; background: #000;"></small>
         </div>
         <button type="submit" id="submitBtn" class="btn" style="margin-top: 1em;">Enviar Confirmación</button>
       </form>
@@ -491,6 +552,7 @@
     const rsvpForm = document.getElementById('rsvpForm');
     const seatsInput = document.getElementById('seatsInput');
     const maxSeatsHelp = document.getElementById('maxSeatsHelp');
+    const maxSeats = document.getElementById('maxSeats');
     const submitBtn = document.getElementById('submitBtn');
     const backToInvBtn = document.getElementById('backToInvBtn');
     const message = document.getElementById('message');
@@ -674,5 +736,4 @@
     });
   </script>
 </body>
-
 </html>
